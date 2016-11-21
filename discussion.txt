@@ -1,0 +1,87 @@
+Runtime
+
+1. When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
+
+    The workload in this instance would be the number of animal crackers in the box (which we could refer to as n). We would determine runtime by considering a bottomless, infinite box of animal crackers :) 
+
+
+2. Order the following runtimes in descending order of efficiency (that is, fastest runtimes first, slowest last) as n approaches infinity:
+
+    O(1) — Fastest
+    O(log n)
+    O(n)
+    O(n log n)
+    O(n2)
+    O(2n) — Slowest
+
+------------------------------------------------------------------------------------------
+
+Stacks and Queues
+
+In the following cases, would a stack or queue be a more appropriate data structure?
+    1. The process of loading and unloading pallets onto a flatbed truck
+
+        This process would be best achieved with a stack where the last pallet in (on top of the stack) would be the first one removed (LIFO). 
+
+    2. Putting bottle caps on bottles of beer as they roll down an assembly line
+
+        The most appropriate data structure for this process would be a queue, where the first bottle in a row coming down the assembly line would be handled first (FIFO).
+
+    3. Calculating the solution to this mathematical expression: 2 + (7 * 4) - (3 / 2)
+
+        This expression would be best suited for a stack, where parentheses indicate a brand new expression that should be added to the stack for evaluation. Only once those expressions at the top of the stack are completed can you do the next in the stack.
+
+Describe two more situations where a queue would be an appropriate data structure.
+
+    1. Eating the food in your refrigerator. If you always only ate the newest items first, the older items in your fridge would always go rotten before you get to them. First in first out is the way to go if you want to avoid being wasteful!
+
+    2. Treating patients at a doctors office. Your patients would get pretty annoyed if you always hopped right to the person who walked in the door after you. This is a bit less applicable for a hospital, which assesses urgency for the order of treatment. 
+
+Describe two more situations where a stack would be an appropriate data structure.
+
+    1. Displaying reviews for a business or restaurant. Often the most recent reviews are more relevant than those that are several years old, where a restaurant could have changed ownership or chefs.
+
+    2. An email inbox. Newer incoming messages get put on top of the stack and are likely the first to be viewed when you first open your email (LIFO). If this structure were not the case, new (potentially more important) messages may get lost in the shuffle at the bottom of a long queue of less important messages or spam.
+
+------------------------------------------------------------------------------------------
+
+Linked Lists
+
+Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail? (Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+
+    1. Nodes are the objects containing both the data and next attributes—i.e. the apple node is the object containing both the "Apple" data string along with the next attribute, or arrow pointer to the berry node. 
+
+    2. The data for each node is in this case a string, e.g. "Apple" (but this could potentially be other datatypes).
+
+    3. The head is the first node in our linked list. In this example it is the apple node.
+
+    4. The tail is the last node in the linked list—in this case the cherry node.
+
+
+What’s the difference between doubly- and singly-linked lists?
+
+    A singly-linked list only has one attribute pointing to the next node (i.e. one arrow), whereas a doubly-linked list has nodes which contain attributes pointing to both next and preceeding nodes (i.e. a double-sided arrow).  
+
+Why is it faster to append to a linked list if we keep track of the tail as an attribute?
+
+    It is faster to append to a linked list by keeping track of the tail as it means we do not need to walk through the entire list in order to know the last node. If its tracked by the Linked List attribute self.tail, we can jump directly to that last node and append, and then rebind self.tail to that newly appended node. 
+
+------------------------------------------------------------------------------------------
+
+Trees
+
+Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burrito (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+    In breadth-first search, data would be added to the search as queue and therefore nodes would be visited as follows: Italian, Indian, Mexican, lasagna, pizza, tikka masala, saag, burrito.
+
+Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+    
+    In depth-first search, data would be added as a stack and therefore, the order of visits would be: Mexican, enchiladas, tacos, burrito, indian, saag, tikka masala, italian, pizza, sicilian, New York-style, Chicago-style.
+
+
+How is a binary search tree different from other trees?
+
+    A binary search tree is different from other trees because order matters over heirarchy. A binary search tree must follow a rule in how the children nodes relate to the parent node. Often this rule relates to numeric data of a node (i.e. left node must be less than the parent node and right node must greater) or alphebetical order (i.e. left node must come before its parent node alphebetically and right node must come after), though this rule can be specific to your data.
+
+
+
