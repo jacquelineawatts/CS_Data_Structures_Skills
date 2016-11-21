@@ -2,7 +2,7 @@ Runtime
 
 1. When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
 
-    The workload in this instance would be the number of animal crackers in the box (which we could refer to as n). We would determine runtime by considering a bottomless, infinite box of animal crackers :) 
+    The workload in this instance would be the number of animal crackers in the box (which we would refer to as n). We would determine runtime by considering a bottomless, infinite box of animal crackers... yum:) 
 
 
 2. Order the following runtimes in descending order of efficiency (that is, fastest runtimes first, slowest last) as n approaches infinity:
@@ -81,7 +81,10 @@ Given the tree above, in what order would a Depth First Search (DFS) algorithm v
 
 How is a binary search tree different from other trees?
 
-    A binary search tree is different from other trees because order matters over heirarchy. A binary search tree must follow a rule in how the children nodes relate to the parent node. Often this rule relates to numeric data of a node (i.e. left node must be less than the parent node and right node must greater) or alphebetical order (i.e. left node must come before its parent node alphebetically and right node must come after), though this rule can be specific to your data.
+    A binary search tree is different from other trees because order matters over heirarchy
+    of the data itself. A binary search tree must follow a rule in how the children nodes relate to the parent node. Often this rule relates to numeric data of a node (i.e. the left node must be less than the parent node and right node must greater) or alphebetical order (i.e. left node must come before its parent node alphebetically and right node must come after), though this rule can be specific to your data. 
+
+    To get more granular a given node's children should never go outside the bound of that node's parent either (i.e. a given node of value 3, whose parent node was 5 cannot have a right node of 6, but can have a right node of 4, as that falls between the parent and the grandparent nodes.)
 
 
 
